@@ -1,0 +1,96 @@
+.forma {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(238, 238, 238, 1);
+  width: 100wh;
+
+  @media screen and (min-width: 768px) {
+    width: 700px;
+  }
+}
+
+.input {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  width: 100wh;
+  min-height: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+}
+
+.input:hover {
+  cursor: pointer;
+}
+
+.input:focus-visible {
+  border: 1px solid #2196f3;
+  outline: none;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.labelText {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.btnWraper {
+  width: 100wh;
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+}
+
+.btn {
+  padding: 5px 32px;
+  color: black;
+  background-color: #ffffffff;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid rgba(238, 238, 238, 1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  width: 150px;
+  height: 40px;
+  margin: 0 auto 20px;
+  display: block;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #1e90ff;
+  color: #ffffffff;
+}
+.btn:active {
+  background-color: #1e90ff;
+  color: red;
+}
+
+.error {
+  color: red;
+}
