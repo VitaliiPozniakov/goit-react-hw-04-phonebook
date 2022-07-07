@@ -32,9 +32,7 @@ export default function App() {
     };
 
     if (
-      name.trim() === null ||
       name.trim() === `` ||
-      number.trim() === null ||
       number.trim() === ``
     ) {
       Notify.warning(`all fields must be completed`);
