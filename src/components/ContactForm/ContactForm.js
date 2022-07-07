@@ -5,7 +5,13 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 
 const schema = yup.object().shape({
-  name: yup.string().min(2).max(32).trim().matches().required('Please enter name'),
+  name: yup
+    .string()
+    .min(2)
+    .max(32)
+    .trim()
+    .matches()
+    .required('Please enter name'),
   number: yup.number().required('Please enter number'),
 });
 
@@ -53,14 +59,3 @@ export default ContactForm;
 ContactForm.prototype = {
   onSubmitProp: PropTypes.func.isRequired,
 };
-
-// const Forma = styled(Form)`
-// display: flex;
-// flex-direction: column;
-// border: 1px solid rgba(238, 238, 238, 1);
-// width: 100wh;
-
-// @media screen and (min-width: 768px) {
-//     width: 700px;
-//   }
-// `;
