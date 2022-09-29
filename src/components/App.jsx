@@ -72,7 +72,7 @@ export default function App() {
       </Section>
 
       <Section title="Contacts">
-        {contacts.length > 1 && (
+        {contacts.length > 0 && (
           <Filter value={filter} onChange={changeFilter} />
         )}
         {contacts.length > 0 ? (
