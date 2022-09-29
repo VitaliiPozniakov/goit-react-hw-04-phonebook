@@ -25,11 +25,11 @@ export default function App() {
   }, [contacts]);
 
   const addContact = (name, number) => {
-    const contact = {
-      id: nanoid(10),
-      name,
-      number,
-    };
+    // const contact = {
+    //   id: nanoid(10),
+    //   name,
+    //   number,
+    // };
 
     if (
       name.trim() === `` ||
@@ -41,7 +41,11 @@ export default function App() {
 
     contacts.some(contact => contact.name === name)
       ? Notify.warning(`${name} is already in contact`)
-      : setContacts(prevState => [contact, ...prevState]);
+      : setContacts(prevState => [{
+        id: nanoid(10),
+        name,
+        number,
+      }, ...prevState]);
   };
 
   const changeFilter = evt => {
